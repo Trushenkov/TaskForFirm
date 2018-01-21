@@ -12,14 +12,13 @@ public class TaskForFirm {
 
     public static void main(String[] args) {
 
-        int time = 5;
-        Integer[] arrayWithOrders = {1, 2, 3, 3, 2};
+        int time = 3;
+        Integer[] arrayOFOrders = {2, 5, 8, 6, 10};
 
-        //bubbleSort(arrayWithOrders);
+        Arrays.sort(arrayOFOrders, Collections.reverseOrder());
 
-        Arrays.sort(arrayWithOrders, Collections.reverseOrder());
-
-        System.out.println("Количество единиц времени = " + time + "\nМаксимальная заработанная сумма денег, которую можно получить в пределах доступного времени = " + maxMoneyForTime(time, arrayWithOrders));
+        System.out.println("Количество единиц времени = " + time + "\nМаксимальная заработанная сумма денег, " +
+        "которую можно получить в пределах доступного времени = " + maxMoneyForTime(time, arrayOFOrders));
     }
 
     /**
