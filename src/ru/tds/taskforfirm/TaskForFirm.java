@@ -12,7 +12,7 @@ public class TaskForFirm {
 
     public static void main(String[] args) {
 
-        int time = 3;
+        int time = 44;
         Integer[] arrayOFOrders = {3, 1, 6, 8, 15};
 
         if (isCheckerForTime(time,arrayOFOrders)){
@@ -21,7 +21,6 @@ public class TaskForFirm {
                     "которую можно получить в пределах доступного времени = " + maxMoneyForTime(time, arrayOFOrders));
         } else{
             System.out.println("Переменная time принимает недопустимое значение");
-            return;
         }
 
 
