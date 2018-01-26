@@ -12,13 +12,30 @@ public class TaskForFirm {
 
     public static void main(String[] args) {
 
-        int time = 3;
-        Integer[] arrayOFOrders = {2, 5, 8, 6, 10};
+        int time = 4;
+        Integer[] arrayOFOrders = {3, 1, 6, 8, 15};
 
-        Arrays.sort(arrayOFOrders, Collections.reverseOrder());
+        if (isCheckerForTime(time,arrayOFOrders)){
+            Arrays.sort(arrayOFOrders, Collections.reverseOrder());
+        } else{
+            System.out.println("Переменная time принимает недопустимое значение");
+            return;
+        }
 
         System.out.println("Количество единиц времени = " + time + "\nМаксимальная заработанная сумма денег, " +
-        "которую можно получить в пределах доступного времени = " + maxMoneyForTime(time, arrayOFOrders));
+                "которую можно получить в пределах доступного времени = " + maxMoneyForTime(time, arrayOFOrders));
+
+    }
+
+    /**
+     * Метод для проверки, действительно ли в переменной time содержится допустимое значение.
+     *
+     * @param time время, которое может быть затрачено на выполнение заказов
+     * @param arrayOfOrders массив с заказами
+     * @return true, если time > 0 && time<=arrayOfOrders.length, иначе - false.
+     */
+    private static boolean isCheckerForTime(int time, Integer[] arrayOfOrders) {
+        return time > 0 && time <= arrayOfOrders.length;
     }
 
     /**
