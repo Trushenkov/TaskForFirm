@@ -12,18 +12,18 @@ public class TaskForFirm {
 
     public static void main(String[] args) {
 
-        int time = 4;
+        int time = 3;
         Integer[] arrayOFOrders = {3, 1, 6, 8, 15};
 
         if (isCheckerForTime(time,arrayOFOrders)){
             Arrays.sort(arrayOFOrders, Collections.reverseOrder());
+            System.out.println("Количество единиц времени = " + time + "\nМаксимальная заработанная сумма денег, " +
+                    "которую можно получить в пределах доступного времени = " + maxMoneyForTime(time, arrayOFOrders));
         } else{
             System.out.println("Переменная time принимает недопустимое значение");
             return;
         }
 
-        System.out.println("Количество единиц времени = " + time + "\nМаксимальная заработанная сумма денег, " +
-                "которую можно получить в пределах доступного времени = " + maxMoneyForTime(time, arrayOFOrders));
 
     }
 
